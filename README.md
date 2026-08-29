@@ -43,11 +43,15 @@ This number sits below the broadest top-down industry estimates, which makes sen
 
 ## Recommendation
 
-Target premium cat accessories as the entry point for an online pet product launch in India.
+**Primary: Target premium cat accessories as the entry point.**
+This is the segment the data actually supports — highest premium concentration among categories with a large enough sample (38%), lines up with the "pets as family" trend, and the competition is fragmented enough that a focused brand could stand out. ₹114 Cr SOM is a realistic number to work with.
 
-Reasoning: it's the segment this data actually shows demand for, it lines up with the broader trend of pets being treated more like family in India, and the competition is fragmented enough that a focused brand could stand out. ₹114 Cr is a realistic number to work with, not an inflated one.
+**Considered but not recommended (yet):**
 
-I'm not recommending dogs or food, even though they're bigger categories overall — this dataset doesn't have enough data on either to say anything reliable there. And the ₹114 Cr figure depends on one assumption (how often people rebuy premium pet products) that I couldn't fully source, so before acting on this, that number should be checked against real repeat-purchase data.
+- **Dog products** — the largest real pet-ownership segment in India, but this dataset only has 4 dog listings, nowhere near enough to size or validate demand. Worth a separate, dedicated data pull before treating it as an opportunity.
+- **Budget bird accessories** — the largest *volume* segment in this catalog (147 listings, mostly Budget tier), so it's tempting as a "quick scale" play. Ruled out for a premium/branded entrant specifically, since budget-tier, high-volume categories usually compete on price and logistics, not brand — a weaker fit for a new, differentiated player.
+
+Premium cats is the pick because it's the only segment where the data, the trend research, and a viable competitive gap all point the same direction at once.
 
 ## Limitations
 - 343 listings is a small sample, so these are directional findings, not a full market picture
