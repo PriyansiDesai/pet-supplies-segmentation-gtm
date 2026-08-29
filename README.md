@@ -1,65 +1,58 @@
-﻿# Premium Pet Accessories — Segmentation & GTM Sizing (India E-Commerce)
+# Premium Pet Accessories — Segmentation & GTM Sizing (India E-Commerce)
 
-## What this is
-An analysis of 343 pet product listings from Amazon.in, built to answer a specific question: **which pet product segment should an e-commerce entrant prioritize in India?** Rather than relying on a single industry market-size figure, this project combines real transaction-level data (EDA + segmentation) with a bottoms-up TAM-SAM-SOM model, cross-checked against top-down industry estimates.
+## Overview
+This project looks at 343 pet product listings scraped from Amazon.in to figure out which pet product segment is worth targeting for an online launch in India. I cleaned and explored the data, segmented products by animal type and price, then built a market size estimate from scratch instead of relying on a single industry report.
 
-## Key finding
-What's actually sold on general e-commerce (Amazon.in) for pets doesn't match what's owned or spent on in India. Dogs and food — the two largest pieces of the real Indian pet economy — are both underrepresented in this catalog, while toys and accessories for cats, birds, and small animals dominate instead. Combined with a fragmented, largely unbranded competitive field, this points to a real whitespace: **Premium-tier cat accessories, sold online**, is a segment with both demonstrated demand in this data and limited branded competition.
+## Main finding
+The products listed on Amazon.in don't match how pet ownership actually looks in India. Dogs are the most commonly owned pet by a wide margin, but they're only 1% of the listings in this dataset. Food, usually the biggest spending category in pet care, is outnumbered by toys and accessories. So this catalog is really an accessories-and-non-dog market, not a full picture of pet spending in India.
+
+That gap is the reason I focused the rest of the analysis on cats and premium accessories, since that's the segment the data actually has enough evidence for.
 
 ## What I did
-1. Cleaned and structured 343 raw Amazon.in pet product listings (price formatting, brand extraction, category parsing from breadcrumbs)
-2. Ran EDA to surface category, price, and brand distribution patterns
-3. Segmented products by price tier (Budget / Mid / Premium) and animal type
-4. Built a bottoms-up TAM-SAM-SOM sizing model using real India pet-ownership data cross-referenced with this dataset's pricing
-5. Compared bottoms-up sizing against top-down industry estimates as a sanity check
-6. Translated the findings into a specific GTM recommendation
+1. Cleaned the raw data — prices had commas and inconsistent formatting, brand names had extra text, and categories were buried in a single breadcrumb string that needed splitting
+2. Ran EDA to see what categories, prices, and brands actually show up and how often
+3. Segmented products by animal type and by price tier (Budget, Mid, Premium)
+4. Built a bottoms-up TAM-SAM-SOM estimate using real Indian pet ownership numbers and this dataset's pricing
+5. Compared that estimate against outside market research as a check
+6. Wrote a specific recommendation based on what the data actually supports
 
-## Findings
+## Key findings
 
-**EDA**
-- Dogs make up only 1.2% of listings (4 of 343), despite being the largest pet-owning segment in India by most market research — a representativeness gap, not a reflection of actual ownership
-- Toys (82 listings) outnumber Food (36) — this catalog skews toward accessories, not the consumables that dominate most pet-market spend
-- Price distribution is right-skewed (mean ₹1,885 vs. median ₹969) — a handful of high-price outliers pull the average up
-- "Generic" is the single largest brand label, at 23% of listings — no dominant player, and nearly a quarter of the catalog isn't meaningfully branded
+**Category mix is skewed**
+Dogs: 4 of 343 listings. Toys (82) outnumber Food (36). Prices are right-skewed — a handful of expensive listings pull the average up, so the median (₹969) is more representative than the mean (₹1,885).
 
-**Segmentation** (price tiers: Budget <₹603, Mid ₹603–1,500, Premium >₹1,500)
-- Cats (38%) and Small Animals (42%) skew Premium
-- Birds skews Budget (38% Budget, only 28% Premium)
-- Dogs excluded from tier conclusions — only 3 priced listings, not statistically meaningful
+**Brands are fragmented**
+23% of listings are labeled just "Generic," and no single brand has a meaningful share. That usually points to room for a focused new entrant.
 
-**Market sizing** (bottoms-up, cat-owning households, India)
+**Cats skew premium**
+38% of cat listings fall in the top price tier — the highest of any category with a large enough sample to trust. Small Animals are similar (42%) but there are far fewer of them. Birds lean budget. Dogs had too few listings to draw a real conclusion, so I left that one out rather than force it.
 
-| | Population | Avg price | Frequency/yr | Value |
-|---|---|---|---|---|
-| TAM | 1.9M cat-owning households | ₹997 | 4x *(sourced)* | ₹758 Cr (~$91M) |
-| SAM | 475K buying online | ₹997 | 4x | ₹189 Cr (~$23M) |
-| SOM | 181.5K, Premium tier online | ₹3,132 | 2x *(assumption, flagged)* | ₹114 Cr (~$13.5M) |
+## Market sizing
 
-Top-down industry estimates for India's total pet care market range from $720M to $10.5B depending on source and scope — a ~10x spread. The bottoms-up TAM sits well below the broadest of these, which is directionally consistent (cats + product retail is one slice of a much larger multi-species, multi-channel market), rather than a precise match.
+I built this bottoms-up instead of quoting a single market-size figure, partly because the reports I found disagreed with each other by close to 10x.
+
+| | Definition | Value |
+|---|---|---|
+| TAM | All cat-owning households in India | ₹758 Cr (~$91M) |
+| SAM | Of those, who buy online | ₹189 Cr (~$23M) |
+| SOM | Of those, who'd buy premium products | ₹114 Cr (~$13.5M) |
 
 ![TAM SAM SOM market sizing funnel](tam_sam_som_chart.png)
 
-## GTM recommendation
+This number sits below the broadest top-down industry estimates, which makes sense since cats are just one part of a much larger multi-species market. I'm treating this as a rough consistency check, not proof the number is exactly right.
 
-**Prioritize Premium-tier cat accessories as the entry segment for online pet product sales in India.**
+## Recommendation
 
-Why this segment specifically:
-- Highest Premium-tier concentration among statistically meaningful animal categories (38% of Cat listings are Premium — only Small Animals rank higher at 42%, but Cats have a larger addressable base: 140 listings vs. 52)
-- Aligns with the external trend already confirmed in research — pet humanization and premiumization are accelerating in India, with cats fitting well into the urban, apartment-living lifestyle driving new pet ownership
-- Fragmented competitive field (no dominant brand, 23% of listings unbranded "Generic") — lower barrier to entry than competing in a category with an established leader
-- Quantified opportunity: ₹114 Cr SOM — a credible near-term target, not an inflated headline number
+Target premium cat accessories as the entry point for an online pet product launch in India.
 
-What this recommendation deliberately does not claim:
-- It does not say "enter the dog market" or "enter the food market" — even though both are larger overall, this dataset can't validate demand there given severe underrepresentation
-- It does not treat the ₹114 Cr SOM as guaranteed capture — it's a modeled ceiling based on a partly-assumed purchase frequency, not a revenue forecast
+Reasoning: it's the segment this data actually shows demand for, it lines up with the broader trend of pets being treated more like family in India, and the competition is fragmented enough that a focused brand could stand out. ₹114 Cr is a realistic number to work with, not an inflated one.
 
-Suggested next step: validate the assumed 2x/year Premium purchase frequency with actual repeat-purchase data before committing budget — the single weakest input in the model, and the cheapest one to de-risk before scaling.
+I'm not recommending dogs or food, even though they're bigger categories overall — this dataset doesn't have enough data on either to say anything reliable there. And the ₹114 Cr figure depends on one assumption (how often people rebuy premium pet products) that I couldn't fully source, so before acting on this, that number should be checked against real repeat-purchase data.
 
 ## Limitations
-- Dataset is a 343-row sample, not a full market census — findings describe this catalog, not the whole Indian pet e-commerce market
-- Purchase-frequency inputs are partly assumption-based: the base 4x/year figure is a global (not India-specific) e-commerce benchmark, and the 2x/year Premium-tier figure is an unsourced estimate, both explicitly flagged rather than presented as fact
-- `specifications` field (which may contain Country of Origin — relevant to India's "Made in India" purchasing trend) was too inconsistently structured to reliably parse in scope; flagged as a phase-2 extension
-- Dog-related findings are directional only, given the small sample (3–4 listings)
+- 343 listings is a small sample, so these are directional findings, not a full market picture
+- The purchase-frequency numbers used in sizing are partly assumptions, flagged above
+- One field (product origin, relevant to the "Made in India" trend) was too inconsistent to use reliably in this timeframe — a good next step if this were extended
 
 ## Tools
-Python (pandas) for cleaning, EDA, and segmentation. Manual bottoms-up modeling for TAM-SAM-SOM, cross-checked against secondary market research.
+Python (pandas) for cleaning, EDA, and segmentation. Manual TAM-SAM-SOM modeling, checked against secondary market research.
