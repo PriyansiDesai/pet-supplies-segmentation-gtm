@@ -37,6 +37,8 @@ What's actually sold on general e-commerce (Amazon.in) for pets doesn't match wh
 
 Top-down industry estimates for India's total pet care market range from $720M to $10.5B depending on source and scope — a ~10x spread. The bottoms-up TAM sits well below the broadest of these, which is directionally consistent (cats + product retail is one slice of a much larger multi-species, multi-channel market), rather than a precise match.
 
+![TAM SAM SOM market sizing funnel](tam_sam_som_chart.png)
+
 ## GTM recommendation
 
 **Prioritize Premium-tier cat accessories as the entry segment for online pet product sales in India.**
